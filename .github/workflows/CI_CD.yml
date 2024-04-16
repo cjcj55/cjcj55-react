@@ -19,7 +19,7 @@ jobs:
         run: |
           echo "$PRIVATE_KEY" > cicd && chmod 600 cicd
           ssh -o StrictHostKeyChecking=no -i cicd ${USER_NAME}@${HOSTNAME} '
-          cd /src &&
+          cd /var/html/cjcj55 &&
           git checkout main &&
           git fetch --all &&
           git reset --hard origin/main &&
